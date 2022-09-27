@@ -1,0 +1,30 @@
+<div class="detail-section">
+    <div class="container-fluid">
+<br><br>
+<table class="table table-striped table-hover table-bordered table-content">
+    <thead>
+      <tr class="center-align">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Username</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="center-align">
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.username }}</td>
+        <td>
+        <button (click)="addToTask()" class="btn btn-dark btn-sm">Assign</button></td><br>
+      </tr>
+    </tbody>
+</table>
+<a routerLink="/employee" class="mt-5">Back to Employee List</a>
+    </div>
+</div>
+
+
+

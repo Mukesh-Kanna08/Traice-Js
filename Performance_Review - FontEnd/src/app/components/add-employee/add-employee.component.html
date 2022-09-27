@@ -1,0 +1,42 @@
+<br><br>
+<div class="login-form" style="width:44%" >
+    <form   (ngSubmit) = "handleAddEmployee()">
+        <h2 class="text-center">Add Employee</h2>       
+        <div class="form-group">
+            Name:<input [(ngModel)] = "employee.name" name = "name" type="text" class="form-control"  placeholder= {{employee.name}} required="required">
+        </div>
+        <br>
+        <div class="form-group">
+            Email:
+            <input [(ngModel)] = "employee.email" name = "email" type="text" class="form-control"   required="required" >
+        </div>
+        <br>
+        <div class="form-group">
+            Username:
+            <input [(ngModel)] = "employee.username" name = "username" type="text" class="form-control"   required="required">
+        </div>
+        <br>
+        <div class="form-group">
+            Password:
+            <input [(ngModel)] = "employee.password" name = "password" type="text" class="form-control" required="required">
+        </div>
+        <br>
+        <div class="form-group">
+            Status :
+            <br>
+            <select [(ngModel)]="employee.status" name = "selectedCuisine">
+                <option *ngFor="let status of employee" [ngValue]="status.id">{{status.status_name}}</option>
+            </select>
+             
+        </div>
+        <br>
+
+        
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-block">Add</button>
+        </div>
+               
+    </form>
+    
+</div>

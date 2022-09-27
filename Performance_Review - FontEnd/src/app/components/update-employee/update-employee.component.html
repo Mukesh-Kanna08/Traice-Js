@@ -1,0 +1,41 @@
+<br><br>
+<div class="login-form" style="width:44%" >
+    <form   (ngSubmit) = "updateEmployee()">
+        <h2 class="text-center">Update Employee</h2>       
+        <div class="form-group">
+            Name:<input [(ngModel)] = "employee.name" name = "name" type="text" class="form-control" placeholder={{employee.name}} required="required">
+        </div>
+        <br>
+        <div class="form-group">
+            Email:
+            <input [(ngModel)] = "employee.email" name = "email" type="text" class="form-control" placeholder={{employee.email}} required="required" >
+        </div>
+        <br>
+        <div class="form-group">
+            Username:
+            <input [(ngModel)] = "employee.username" name = "username" type="text" class="form-control" placeholder={{employee.username}} required="required">
+        </div>
+        <br>
+        <div class="form-group">
+            Password:
+            <input [(ngModel)] = "employee.password" name = "password" type="text" class="form-control" placeholder={{employee.password}} required="required">
+        </div>
+        <br>
+       <!-- <div class="form-group">
+            Status:
+            <br>
+            <select [(ngModel)]="employee.status" name = "status">
+                <option *ngFor="let status of employeeStatus" [ngValue]="status.id">{{status.status}}</option>
+            </select>
+             
+        </div>-->
+
+        <br>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success btn-block">Update</button>
+        </div>
+               
+    </form>
+    <p class="text-center"><a routerLink="/login">Back to Login</a></p>
+</div>

@@ -1,0 +1,49 @@
+<br><br>
+<div class="login-form" >
+    <form  (ngSubmit) = "saveUser()">
+        <h2 class="text-center">Review</h2>  
+        <h6>Name:</h6>     
+        <div class="form-group">
+            <input [(ngModel)] = "user.username" name = "username" type="text" class="form-control" placeholder="Name" required="required">
+        </div>
+        <br>
+        <h6>Email:</h6>
+        <div class="form-group">
+            <input [(ngModel)] = "user.email" name = "email" type="text" class="form-control" placeholder="Email" required="required">
+        </div>
+        <br>
+        <h6>Skills:</h6>
+        <div class="form-group">
+            <input [(ngModel)] = "user.skill" name = "skill" type="skill" class="form-control" placeholder="Skills" required="required">
+        </div>
+        <br>
+        <h6>Communication:</h6>
+        <div class="form-group">
+            <input [(ngModel)] = "user.communication" name = "communication" type="text" class="form-control" placeholder="Communication" required="required">
+        </div>
+        <br>
+
+        <h6>Attendance:</h6>
+        <div class="form-group">
+            <input [(ngModel)] = "user.attendance" name = "attendance" type="text" class="form-control" placeholder="Attendance" required="required">
+        </div>
+        <br>
+        <h6>Technologies:</h6>
+        <div class="form-group">
+            <input [(ngModel)] = "user.technologies" name = "technologies" type="text" class="form-control" placeholder="Technologies" required="required">
+        </div>
+        <br>
+        <h6>Write in Comments:</h6>
+        <div class="form-group">
+            <input [(ngModel)] = "user.comments" name = "comments" type="text" class="form-control" placeholder="write here..." required="required">
+        </div>
+        <br>
+        
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark btn-block">Submit</button>
+        </div>
+               
+    </form>
+    <p class="text-center"><a routerLink="/employee">Back to Home</a></p>
+</div>

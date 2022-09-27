@@ -1,0 +1,38 @@
+<div class="main-content" >
+
+    <div class="container-xl">
+        <div class="table-responsive">
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4><b>Performance Reviews</b></h4>
+                </div>
+
+                </div>
+              </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered table-content">
+    <thead>
+      <tr class="center-align">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor = "let tempUser of user"  class="center-align">
+        <td >{{ tempUser.username  }}</td>
+        <td>{{ tempUser.email }}</td>
+        <td> <a href="#" *ngIf="username == 'admin'" class="btn btn-success" > Submitted </a>
+                  </td>
+      </tr>
+      </tbody>
+</table>
+        </div>
+    </div>
+</div>
+
+
+
+

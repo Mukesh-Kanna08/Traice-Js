@@ -1,0 +1,59 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+            <div *ngIf="username == null" class="alert alert-danger col-md-12" role="alert">
+                You need to be registered in the system. 
+            </div>
+
+            <div *ngIf="username != null && empDetails.length > 0">
+                <div class="container-xl">
+                    <div class="table-responsive">
+                      <div class="table-wrapper">
+                        <div class="table-title">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <h4><b>Employees Assigned</b></h4>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                            <table class="table table-striped table-hover table-bordered table-content">
+                                <thead>
+                                  <tr class="center-align">
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let tempempDetails of empDetails">
+                                    <td>
+                                        {{ tempempDetails.name }}
+                                    </td>
+                                    <td>
+                                        {{ tempempDetails.username }}
+                                    </td>
+                                    <td><p>Assigned</p></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+      
+
+            <!-- if cart is empty then display a message -->
+            <div *ngFor="let tempempDetails of empDetails"></div>
+            <div *ngIf="empDetails.length == 0" class="alert alert-warning col-md-12" role="alert">
+                Please add the Employees List.
+            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</div>
+
+
+
+

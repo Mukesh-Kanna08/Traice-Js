@@ -1,0 +1,53 @@
+<div class="main-content" >
+
+
+            <div id="alert" style="margin-top: -23px;" *ngIf="username != null" class="alert alert-warning col-xs-12 alert-dismissible" role="alert">
+                Welecome {{username}}
+            </div>
+            <div class="container-xl">
+                <div class="table-responsive">
+                  <div class="table-wrapper">
+                    <div class="table-title">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <h4><b>Employees</b></h4>
+                        </div>
+                        <div class="col-sm-6" style="text-align:right">
+                            <div *ngIf="username == 'admin'">
+                          <button class="btn btn-success" routerLink="/add-employee">
+                            <i class='fas fa-plus-circle'></i><span style="float:right"> Add Employee </span>
+                          </button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                        <table class="table table-striped table-hover table-bordered table-content">
+                            <thead>
+                              <tr class="center-align">
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Actions</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let tempEmployee of employee" class="center-align">
+                                <td>{{ tempEmployeename }}</td>
+                                <td>{{ tempEmployee.email }}</td>
+                                <td>
+                                    <a routerLink="/register"  class="btn"><i class='fas fa-edit edit'></i>Form</a>
+                                    <a routerLink="/checkout"  class="btn"><i class='fas fa-eye view'></i>Review</a>
+                                    <button style="margin-top: 1px; margin-left:35px;"*ngIf="username == 'admin'" (click)="addToCart(tempEmployee)"
+                                    class="btn btn-primary btn-sm">Assign</button><br>
+                                    <a routerLink="/employee/{{ tempEmployee.id }}" *ngIf="username == 'admin'" class="btn" ><i class='fas fa-eye view'></i></a>
+                                    <a routerLink="/update-employee/{{ tempEmployee.id }}" *ngIf="username == 'admin'" class="btn"><i class="fa fa-edit edit"></i></a>
+                                    <button type="button" *ngIf="username == 'admin'" (click)="deleteEmployee(tempEmployee.id)" class="btn"><i class='fas fa-trash-alt delete'></i></button>
+                                  </td>
+                              </tr>
+                              </tbody>
+                        </table>
+                  </div>
+                </div>
+            </div>
+</div>
+
+                        
